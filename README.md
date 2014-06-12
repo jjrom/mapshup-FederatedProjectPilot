@@ -31,3 +31,8 @@ Post Installation
 
         # Run this command each time you modify a file under $FPP_HOME/src
         $FPP_HOME/build.sh -t $FPP_TARGET
+
+Notes
+=====
+
+FEDEO datasources are available [here](http://geo.spacebel.be/opensearch/readme.html)
