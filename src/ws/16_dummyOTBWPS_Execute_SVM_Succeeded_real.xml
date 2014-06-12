@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<wps:ExecuteResponse statusLocation="%MAPSHUP_FPP_ROOT_URL%/fpp/ws/12_dummyOTBWPS.php?request=succeeded" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml" xmlns:mml="http://www.w3.org/1998/Math/MathML" serviceInstance="http://localhost:8080/cstl-wrapper/WS/wps/default?SERVICE=WPS&amp;REQUEST=GetCapabilities" service="WPS" version="1.0.0" xml:lang="en-EN">
+    <wps:Process wps:processVersion="1.0.0">
+        <ows:Identifier>urn:ogc:cstl:wps:orfeo:svmclassification</ows:Identifier>
+        <ows:Title>Orfeo : Svmclassification</ows:Title>
+        <ows:Abstract>A classification algorithm based on the principle of support vector machine.</ows:Abstract>
+    </wps:Process>
+    <wps:Status creationTime="2013-01-09T16:17:08.262Z">
+        <wps:ProcessSucceeded>Process accepted</wps:ProcessSucceeded>
+    </wps:Status>
+    <wps:ProcessOutputs>
+        <wps:Output>
+            <ows:Identifier>urn:ogc:cstl:wps:orfeo:svmclassification:output:outputImage</ows:Identifier>
+            <ows:Title>OutputImage</ows:Title>
+            <ows:Abstract>The result of the watershed filter.</ows:Abstract>
+            <wps:Data>
+                <wps:ComplexData mimeType="application/x-ogc-wms" encoding="utf-8">{"type":"WMS","title":"WPS_OTB_processing_orfeo.svmclassification_outputImage_1395508767701","url":"http://constellation-wps.geomatys.com/cstl-wrapper/WS/wms/wpscoverages?","layers":"WPS_OTB_processing_orfeo.svmclassification_outputImage_1395508767701","version":"1.3.0","bbox":{"bounds":"0.902158702923396,43.151149931454896,2.044029583142085,43.881583884071695","crs":"EPSG:4326"},"srs":"EPSG:3857"}</wps:ComplexData>
+            </wps:Data>
+        </wps:Output>
+    </wps:ProcessOutputs>
+</wps:ExecuteResponse>

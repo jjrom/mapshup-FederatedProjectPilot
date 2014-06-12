@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>                    
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>mapshup</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/> 
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <link rel="shortcut icon" href="./favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="reset.css" />
+        <link rel="stylesheet" type="text/css" href="js/mol/theme/default/style.css" />
+        <link rel="stylesheet" type="text/css" href="js/mapshup/theme/default/mapshup.css" />
+        <link rel="stylesheet" type="text/css" href="js/mjquery/mjquery.css" />
+        <link rel="stylesheet" type="text/css" href="fpp/style.css" />
+    </head>
+    <body>
+        <div id="header">
+            <h1><a href="http://earth.esa.int/gscb/">GSCB</a> | Federated Project Pilot</h1>
+        </div>
+        <div id="mapshup"></div>
+        
+        <script type="text/javascript" src="js/mjquery/mjquery.js"></script>
+        
+        <!-- REMOVE IF TIMELINE IS NOT USED -->
+        <script type="text/javascript" src="js/mjquery/mjquery.ui.js"></script>
+        
+        <script type="text/javascript" src="js/mol/OpenLayers.js"></script>
+        <script type="text/javascript" src="js/mapshup/mapshup.js"></script>
+        <script type="text/javascript" src="fpp/FPP.js"></script>
+        <script type="text/javascript" src="js/mapshup/config/default.js"></script>
+        <script type="text/javascript" src="fpp/config.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                M.load({
+                    i18n: {
+                        fr: {
+                            "About":"A propos",
+                            "Orthorectication":"Orthorectication",
+                            "Orthorectified products":"Produits orthorectifiés",
+                            "Projection code":"Code de reprojection",
+                            "FPP project":"Projet FPP",
+                            "All right reserved":"Tous droits réservés",
+                            "Add orthorectification":"Ajouter orthorectification",
+                            "Process failed":"Echec du processus",
+                            "Error : FPP cannot be initialized - some configuration parameters are missing":"Erreur : FPP n'a put être initialialisé - certains paramètres de configuration sont manquant",
+                            "Platform":"Plateforme",
+                            "Resolution":"Résolution",
+                            "Product resolution":"Résolution du produit",
+                            "Search for products":"Rechercer des produits",
+                            "Zoom on product":"Center sur l'emprise",
+                            "Download this product":"Télécharger ce produit",
+                            "Compute Land Cover from this product":"Calculer la carte d'occupation du sol à partir de ce produit",
+                            "Assess product quality":"Vérifier la qualité du produit",
+                            "New product":"Nouveau produit",
+                            "Visualize":"Visualiser",
+                            "Create an orthorectified product":"Créer un produit orthorectifié",
+                            "Display Land Cover":"Afficher l'occupation du sol",
+                            "Remove Land Cover":"Supprimer l'occupation du sol"
+                        }
+                    }
+               });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<wps:Capabilities xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:ows="http://www.opengis.net/ows/1.1" service="WPS" xml:lang="en-EN" version="1.0.0" updateSequence="1352815432361">
+    <ows:ServiceIdentification>
+        <ows:Title>WPS server</ows:Title>
+        <ows:Abstract>WPS server developed by Geomatys for Constallation SDI.</ows:Abstract>
+        <ows:Keywords>
+            <ows:Keyword>WPS</ows:Keyword>
+            <ows:Keyword>Constallation</ows:Keyword>
+            <ows:Keyword>geoprocessing</ows:Keyword>
+        </ows:Keywords>
+        <ows:ServiceType>WPS</ows:ServiceType>
+        <ows:ServiceTypeVersion>1.0.0</ows:ServiceTypeVersion>
+        <ows:Fees>NONE</ows:Fees>
+        <ows:AccessConstraints>NONE</ows:AccessConstraints>
+    </ows:ServiceIdentification>
+    <ows:ServiceProvider>
+        <ows:ProviderName>Geomatys</ows:ProviderName>
+        <ows:ProviderSite xlink:href="http://www.geomatys.com/"/>
+        <ows:ServiceContact>
+            <ows:IndividualName>Vincent Heurteaux</ows:IndividualName>
+            <ows:PositionName>PDG</ows:PositionName>
+            <ows:ContactInfo>
+                <ows:Phone>
+                    <ows:Voice>04 67 54 87 30</ows:Voice>
+                    <ows:Facsimile/>
+                </ows:Phone>
+                <ows:Address>
+                    <ows:DeliveryPoint>24 rue Pierre Renaudel</ows:DeliveryPoint>
+                    <ows:City>ARLES</ows:City>
+                    <ows:AdministrativeArea>Bouches du rhone</ows:AdministrativeArea>
+                    <ows:PostalCode>13200</ows:PostalCode>
+                    <ows:Country>France</ows:Country>
+                    <ows:ElectronicMailAddress>vincent.heurteaux@geomatys.fr</ows:ElectronicMailAddress>
+                </ows:Address>
+            </ows:ContactInfo>
+        </ows:ServiceContact>
+    </ows:ServiceProvider>
+    <ows:OperationsMetadata>
+        <ows:Operation name="GetCapabilities">
+            <ows:DCP>
+                <ows:HTTP>
+                    <ows:Get xlink:href="http://constellation-wps.geomatys.com/cstl-wrapper/WS/wps/default?"/>
+                    <ows:Post xlink:href="http://constellation-wps.geomatys.com/cstl-wrapper/WS/wps/default?"/>
+                </ows:HTTP>
+            </ows:DCP>
+            <ows:Parameter name="service">
+                <ows:AllowedValues>
+                    <ows:Value>WPS</ows:Value>
+                </ows:AllowedValues>
+            </ows:Parameter>
+            <ows:Parameter name="Acceptversions">
+                <ows:AllowedValues>
+                    <ows:Value>1.0.0</ows:Value>
+                </ows:AllowedValues>
+            </ows:Parameter>
+            <ows:Parameter name="AcceptFormats">
+                <ows:AllowedValues>
+                    <ows:Value>text/xml</ows:Value>
+                </ows:AllowedValues>
+            </ows:Parameter>
+        </ows:Operation>
+        <ows:Operation name="DescribeProcess">
+            <ows:DCP>
+                <ows:HTTP>
+                    <ows:Get xlink:href="http://constellation-wps.geomatys.com/cstl-wrapper/WS/wps/default?"/>
+                    <ows:Post xlink:href="http://constellation-wps.geomatys.com/cstl-wrapper/WS/wps/default?"/>
+                </ows:HTTP>
+            </ows:DCP>
+            <ows:Parameter name="service">
+                <ows:AllowedValues>
+                    <ows:Value>WPS</ows:Value>
+                </ows:AllowedValues>
+            </ows:Parameter>
+            <ows:Parameter name="version">
+                <ows:AllowedValues>
+                    <ows:Value>1.0.0</ows:Value>
+                </ows:AllowedValues>
+            </ows:Parameter>
+        </ows:Operation>
+        <ows:Operation name="Execute">
+            <ows:DCP>
+                <ows:HTTP>
+                    <ows:Post xlink:href="http://constellation-wps.geomatys.com/cstl-wrapper/WS/wps/default?"/>
+                </ows:HTTP>
+            </ows:DCP>
+            <ows:Parameter name="service">
+                <ows:AllowedValues>
+                    <ows:Value>WPS</ows:Value>
+                </ows:AllowedValues>
+            </ows:Parameter>
+            <ows:Parameter name="version">
+                <ows:AllowedValues>
+                    <ows:Value>1.0.0</ows:Value>
+                </ows:AllowedValues>
+            </ows:Parameter>
+        </ows:Operation>
+    </ows:OperationsMetadata>
+    <wps:ProcessOfferings>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:orfeo:svmclassification</ows:Identifier>
+            <ows:Title>Orfeo : Svmclassification</ows:Title>
+            <ows:Abstract>A classification algorithm based on the principle of support vector machine.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:jts:intersection</ows:Identifier>
+            <ows:Title>Jts : Intersection</ows:Title>
+            <ows:Abstract>Computes a intersection Geometry between the source geometry (geom1) and the other (geom2).</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:jts:convexHull</ows:Identifier>
+            <ows:Title>Jts : ConvexHull</ows:Title>
+            <ows:Abstract>Return the convex hull geometry of the specified geometry.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:jts:touches</ows:Identifier>
+            <ows:Title>Jts : Touches</ows:Title>
+            <ows:Abstract>Returns true if this geometry(geom1) touches the specified geometry(geom2).</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:jts:envelope</ows:Identifier>
+            <ows:Title>Jts : Envelope</ows:Title>
+            <ows:Abstract>Returns this Geometry bounding box.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:jts:crosses</ows:Identifier>
+            <ows:Title>Jts : Crosses</ows:Title>
+            <ows:Abstract> Returns true if this geometry source (geom1) crosses the specified geometry (geom2).</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:jts:boundary</ows:Identifier>
+            <ows:Title>Jts : Boundary</ows:Title>
+            <ows:Abstract>Return boundarty geometry of an input JTS geometry</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:jts:centroid</ows:Identifier>
+            <ows:Title>Jts : Centroid</ows:Title>
+            <ows:Abstract>Return the centroid point of an input JTS geometry</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:jts:buffer</ows:Identifier>
+            <ows:Title>Jts : Buffer</ows:Title>
+            <ows:Abstract>Apply JTS buffer to a geometry.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:jts:difference</ows:Identifier>
+            <ows:Title>Jts : Difference</ows:Title>
+            <ows:Abstract>Computes a difference Geometry between the source geometry (geom1) and the other (geom2).</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:jts:overlaps</ows:Identifier>
+            <ows:Title>Jts : Overlaps</ows:Title>
+            <ows:Abstract>Returns true if this geometry (geom1) overlaps the specified geometry (geom2).</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:jts:isEmpty</ows:Identifier>
+            <ows:Title>Jts : IsEmpty</ows:Title>
+            <ows:Abstract>Returns true if this geometry source is an empty geometry.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:jts:area</ows:Identifier>
+            <ows:Title>Jts : Area</ows:Title>
+            <ows:Abstract>Return the area of a JTS geometry</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:jts:equals2d</ows:Identifier>
+            <ows:Title>Jts : Equals2d</ows:Title>
+            <ows:Abstract>Return true if source geometry (geom1) is equals to the other geometry (geom2) .</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:jts:covers</ows:Identifier>
+            <ows:Title>Jts : Covers</ows:Title>
+            <ows:Abstract>Returns true if this geometry source (geom1) covers the specified geometry (geom2).</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:jts:union</ows:Identifier>
+            <ows:Title>Jts : Union</ows:Title>
+            <ows:Abstract>Computes a union Geometry between the source geometry (geom1) and the other (geom2).</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:jts:intersects</ows:Identifier>
+            <ows:Title>Jts : Intersects</ows:Title>
+            <ows:Abstract>Returns true if this geometry source (geom1) intersects the specified geometry (geom2).</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:jts:contain</ows:Identifier>
+            <ows:Title>Jts : Contain</ows:Title>
+            <ows:Abstract>Return true if source geometry (geom1) contains the specified geometry(geom2).</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:jts:coveredBy</ows:Identifier>
+            <ows:Title>Jts : CoveredBy</ows:Title>
+            <ows:Abstract>Returns true if this geometry source (geom1) is covered by the specified geometry (geom2).</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:jts:within</ows:Identifier>
+            <ows:Title>Jts : Within</ows:Title>
+            <ows:Abstract>Returns true if this geometry source (geom1) is within the specified geometry (geom2).</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:jts:lenght</ows:Identifier>
+            <ows:Title>Jts : Lenght</ows:Title>
+            <ows:Abstract>Returns the length of this Geometry.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:math:atan</ows:Identifier>
+            <ows:Title>Math : Atan</ows:Title>
+            <ows:Abstract>Return arc tangent of a double.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:math:asin</ows:Identifier>
+            <ows:Title>Math : Asin</ows:Title>
+            <ows:Abstract>Return arc sinus of a double.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:math:toRadian</ows:Identifier>
+            <ows:Title>Math : ToRadian</ows:Title>
+            <ows:Abstract>Converts an angle measured in degrees to an approximately equivalent angle measured in radians.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:math:cos</ows:Identifier>
+            <ows:Title>Math : Cos</ows:Title>
+            <ows:Abstract>Returns the trigonometric cosinus of an angle in double.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:math:ceil</ows:Identifier>
+            <ows:Title>Math : Ceil</ows:Title>
+            <ows:Abstract>Returns the nearest upper or equals integer (in double) to the argument double.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:math:round</ows:Identifier>
+            <ows:Title>Math : Round</ows:Title>
+            <ows:Abstract>Returns the closest long to the argument. The result is rounded to an integer by adding 1/2, taking the floor of the result, and casting the result to type long.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:math:divide</ows:Identifier>
+            <ows:Title>Math : Divide</ows:Title>
+            <ows:Abstract>Divide two double (first/second).</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:math:multiply</ows:Identifier>
+            <ows:Title>Math : Multiply</ows:Title>
+            <ows:Abstract>Multiply two double .</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:math:add</ows:Identifier>
+            <ows:Title>Math : Add</ows:Title>
+            <ows:Abstract>Adds two double.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:math:log</ows:Identifier>
+            <ows:Title>Math : Log</ows:Title>
+            <ows:Abstract>Return the natural logarithm of a double</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:math:absolute</ows:Identifier>
+            <ows:Title>Math : Absolute</ows:Title>
+            <ows:Abstract>Return the absolute value of a double.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:math:substract</ows:Identifier>
+            <ows:Title>Math : Substract</ows:Title>
+            <ows:Abstract>Substract two double (first - second).</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:math:atan2</ows:Identifier>
+            <ows:Title>Math : Atan2</ows:Title>
+            <ows:Abstract>Returns the angle theta from the conversion of rectangular coordinates (x, y) to polar coordinates (r, theta). This method computes the phase theta by computing an arc tangent of y/x in the range of -pi to pi..</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:math:floor</ows:Identifier>
+            <ows:Title>Math : Floor</ows:Title>
+            <ows:Abstract>Returns the nearest lower or equals integer (in double) to the argument double.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:math:sin</ows:Identifier>
+            <ows:Title>Math : Sin</ows:Title>
+            <ows:Abstract>Returns the trigonometric sine of an angle in double.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:math:power</ows:Identifier>
+            <ows:Title>Math : Power</ows:Title>
+            <ows:Abstract>Return first double raised to the power of the second (first^second).</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:math:toDegree</ows:Identifier>
+            <ows:Title>Math : ToDegree</ows:Title>
+            <ows:Abstract>Converts an angle measured in radians to an approximately equivalent angle measured in degrees.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:math:acos</ows:Identifier>
+            <ows:Title>Math : Acos</ows:Title>
+            <ows:Abstract>Return arc cosinus of a double.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:math:tan</ows:Identifier>
+            <ows:Title>Math : Tan</ows:Title>
+            <ows:Abstract>Returns the trigonometric tangent of an angle in double.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:orfeo:watershed</ows:Identifier>
+            <ows:Title>Orfeo : Watershed</ows:Title>
+            <ows:Abstract>A segmentation algorithm based on watershed principle.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:orfeo:simplepansharpening</ows:Identifier>
+            <ows:Title>Orfeo : Simplepansharpening</ows:Title>
+            <ows:Abstract>A process which take an high definition, grayscale image, and compute its colors thanks to a low defined but colored image of the same scene.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:orfeo:connectedthreshold</ows:Identifier>
+            <ows:Title>Orfeo : Connectedthreshold</ows:Title>
+            <ows:Abstract>A threshold applied on a precise zone of the input image.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:orfeo:ndvi</ows:Identifier>
+            <ows:Title>Orfeo : Ndvi</ows:Title>
+            <ows:Abstract>A process which compute NDVI image from a red and a NIR raster.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:orfeo:haralickdescriptors</ows:Identifier>
+            <ows:Title>Orfeo : Haralickdescriptors</ows:Title>
+            <ows:Abstract>A process which compute Haralick correlation from an image.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:orfeo:cloudDetection</ows:Identifier>
+            <ows:Title>Orfeo : CloudDetection</ows:Title>
+            <ows:Abstract>An algorithm for cloud detection on images. First it will get a map of cloud pixels in the source image, and then apply a threshold to create a black and white mask.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:orfeo:binarythreshold</ows:Identifier>
+            <ows:Title>Orfeo : Binarythreshold</ows:Title>
+            <ows:Abstract>A simple threshold on an image. We give it an interval of colors to catch, and what color to apply instead.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:orfeo:meandifferencechangedetector</ows:Identifier>
+            <ows:Title>Orfeo : Meandifferencechangedetector</ows:Title>
+            <ows:Abstract>A process which find main differences between two images.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:vector:clip</ows:Identifier>
+            <ows:Title>Vector : Clip</ows:Title>
+            <ows:Abstract>Return the result FeatureCollection of clipping</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:vector:intersection</ows:Identifier>
+            <ows:Title>Vector : Intersection</ows:Title>
+            <ows:Abstract>Return a new FeatureCollection where each Feature is create from an intersection Geometry</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:vector:sortby</ows:Identifier>
+            <ows:Title>Vector : Sortby</ows:Title>
+            <ows:Abstract>Sort a FeatureCollection</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:vector:convexhull</ows:Identifier>
+            <ows:Title>Vector : Convexhull</ows:Title>
+            <ows:Abstract>Return the convex hull based on FeatureCollection geometries</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:vector:merge</ows:Identifier>
+            <ows:Title>Vector : Merge</ows:Title>
+            <ows:Abstract>Merge many FeatureCollection in one. The fist FeatureCollection found in the input Collection have his FeatureType preserved. The others will be adapted to this one.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:vector:maxlimit</ows:Identifier>
+            <ows:Title>Vector : Maxlimit</ows:Title>
+            <ows:Abstract>Limit a FeatureCollection returns to a maximum</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:vector:spatialjoin</ows:Identifier>
+            <ows:Title>Vector : Spatialjoin</ows:Title>
+            <ows:Abstract>Return the target FeatureCollection with source FeatureCollection attributes.The link between target and source depend of method used (Intersect or Nearest)</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:vector:clipGeometry</ows:Identifier>
+            <ows:Title>Vector : ClipGeometry</ows:Title>
+            <ows:Abstract>Clip a FeatureCollection with a geometry and return a resulting FeatureCollection</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:vector:douglasPeucker</ows:Identifier>
+            <ows:Title>Vector : DouglasPeucker</ows:Title>
+            <ows:Abstract>Simplify a FeatureCollection geometry with Douglas Pucker algorithm</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:vector:nearest</ows:Identifier>
+            <ows:Title>Vector : Nearest</ows:Title>
+            <ows:Abstract>Return the nearest Feature(s) in a FeatureCollection with the inputGeometry</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:vector:centroid</ows:Identifier>
+            <ows:Title>Vector : Centroid</ows:Title>
+            <ows:Abstract>Return Feature centroid of all Feature in FeatureCollection</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:vector:buffer</ows:Identifier>
+            <ows:Title>Vector : Buffer</ows:Title>
+            <ows:Abstract>Apply buffer function to a FeatureCollection geometry</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:vector:difference</ows:Identifier>
+            <ows:Title>Vector : Difference</ows:Title>
+            <ows:Abstract>Return the result FeatureCollection of Difference process</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:vector:retype</ows:Identifier>
+            <ows:Title>Vector : Retype</ows:Title>
+            <ows:Abstract>Limit a FeatureCollection returns to a maximum</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:vector:diffGeometry</ows:Identifier>
+            <ows:Title>Vector : DiffGeometry</ows:Title>
+            <ows:Abstract>Compute difference between a FeatureCollection and a geometry. Return a FeatureCollection.</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:vector:reproject</ows:Identifier>
+            <ows:Title>Vector : Reproject</ows:Title>
+            <ows:Abstract>Return a FeatureCollection re-project into the target CRS</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:vector:union</ows:Identifier>
+            <ows:Title>Vector : Union</ows:Title>
+            <ows:Abstract>Return the result FeatureCollection of Union process</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:vector:intersect</ows:Identifier>
+            <ows:Title>Vector : Intersect</ows:Title>
+            <ows:Abstract>Return all Feature witch intersect the input geometry</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:vector:affinetransform</ows:Identifier>
+            <ows:Title>Vector : Affinetransform</ows:Title>
+            <ows:Abstract>Apply an affine transformation in Features geometries</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:vector:startoffset</ows:Identifier>
+            <ows:Title>Vector : Startoffset</ows:Title>
+            <ows:Abstract>Start FeatureCollection iteration at given offset</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:vector:filter</ows:Identifier>
+            <ows:Title>Vector : Filter</ows:Title>
+            <ows:Abstract>Apply a filter to a FeatureCollection</ows:Abstract>
+        </wps:Process>
+        <wps:Process wps:processVersion="1.0.0">
+            <ows:Identifier>urn:ogc:cstl:wps:vector:regroup</ows:Identifier>
+            <ows:Title>Vector : Regroup</ows:Title>
+            <ows:Abstract>Return a Featrue Collection generated by the Regroup processEach different value of the given attribute name return a Feature.</ows:Abstract>
+        </wps:Process>
+    </wps:ProcessOfferings>
+    <wps:Languages>
+        <wps:Default>
+            <ows:Language>en-EN</ows:Language>
+        </wps:Default>
+        <wps:Supported>
+            <ows:Language>en-EN</ows:Language>
+        </wps:Supported>
+    </wps:Languages>
+    <wps:WSDL xlink:href=""/>
+</wps:Capabilities>

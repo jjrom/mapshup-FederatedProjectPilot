@@ -1,0 +1,156 @@
+{
+  "type": "FeatureCollection",
+  "totalResults": 3,
+  "features": [
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.90229345285026,
+              43.151051610008
+            ],
+            [
+              0.90229345285026,
+              43.881486745639
+            ],
+            [
+              2.0441643330689,
+              43.881486745639
+            ],
+            [
+              2.0441643330689,
+              43.151051610008
+            ],
+            [
+              0.90229345285026,
+              43.151051610008
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "platform": "SPOT",
+        "services": {
+          "products": [
+            {
+              "identifier": "Spot5_Toulouse_J_IMAGERY4_ortho1",
+              "downloadUrl": "http:\/\/fpp-eoprocessing.terradue.com\/fpp-services\/webdav\/orthoImages\/Spot5_Toulouse_J_IMAGERY4\/30.0\/Spot5_Toulouse_J_IMAGERY4_ortho1.tif",
+              "browseUrl": "http:\/\/fpp-eoprocessing.terradue.com\/fpp-services\/WS\/wms\/dreamImages?service=wms&version=1.3.0&request=getmap&format=image\/png&width=512&height=512&styles=&crs=EPSG:3857&bbox=100442.84771739518,5334991.777002065,227555.3326550067,5447120.263914741&layers=Spot5_Toulouse_J_IMAGERY4_ortho1",
+              "qualityMask": "",
+              "shiftMask": "",
+              "resolution": 30
+            }
+          ]
+        },
+        "thumbnail": "http:\/\/fpp-eoprocessing.terradue.com\/fpp-services\/webdav\/overview\/thumbnails\/Spot5_Toulouse_J_IMAGERY4.jpg",
+        "resolution": "9.305588970722351E-5",
+        "identifier": "Spot5_Toulouse_J_IMAGERY4",
+        "quicklook": "http:\/\/fpp-eoprocessing.terradue.com\/fpp-services\/webdav\/overview\/quicklooks\/Spot5_Toulouse_J_IMAGERY4.jpg",
+        "metadata": ""
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.2532860388027,
+              44.320369512295
+            ],
+            [
+              6.2532860388027,
+              44.978236407663
+            ],
+            [
+              7.1789765153067,
+              44.978236407663
+            ],
+            [
+              7.1789765153067,
+              44.320369512295
+            ],
+            [
+              6.2532860388027,
+              44.320369512295
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "platform": "SPOT",
+        "services": {
+          "products": [
+            {
+              "identifier": "Spot5_Alpes_A_imagery2_ortho1",
+              "downloadUrl": "http:\/\/fpp-eoprocessing.terradue.com\/fpp-services\/webdav\/orthoImages\/Spot5_Alpes_A_imagery2\/30.0\/Spot5_Alpes_A_imagery2_ortho1.tif",
+              "browseUrl": "http:\/\/fpp-eoprocessing.terradue.com\/fpp-services\/WS\/wms\/dreamImages?service=wms&version=1.3.0&request=getmap&format=image\/png&width=512&height=512&styles=&crs=EPSG:3857&bbox=696112.6176242011,5515154.698821768,799160.0101008093,5618095.904474021&layers=Spot5_Alpes_A_imagery2_ortho1",
+              "qualityMask": "",
+              "shiftMask": "",
+              "resolution": 30
+            }
+          ]
+        },
+        "thumbnail": "http:\/\/fpp-eoprocessing.terradue.com\/fpp-services\/webdav\/overview\/thumbnails\/Spot5_Alpes_A_imagery2.jpg",
+        "resolution": "4.5011972392934734E-5",
+        "identifier": "Spot5_Alpes_A_imagery2",
+        "quicklook": "http:\/\/fpp-eoprocessing.terradue.com\/fpp-services\/webdav\/overview\/quicklooks\/Spot5_Alpes_A_imagery2.jpg",
+        "metadata": ""
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.2525886785316,
+              44.319397433654
+            ],
+            [
+              6.2525886785316,
+              44.978005111358
+            ],
+            [
+              7.1779342119868,
+              44.978005111358
+            ],
+            [
+              7.1779342119868,
+              44.319397433654
+            ],
+            [
+              6.2525886785316,
+              44.319397433654
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "platform": "SPOT",
+        "services": {
+          "products": [
+            {
+              "identifier": "Spot5_Alpes_J_imagery1_ortho1",
+              "downloadUrl": "http:\/\/fpp-eoprocessing.terradue.com\/fpp-services\/webdav\/orthoImages\/Spot5_Alpes_J_imagery1\/50.0\/Spot5_Alpes_J_imagery1_ortho1.tif",
+              "browseUrl": "http:\/\/fpp-eoprocessing.terradue.com\/fpp-services\/WS\/wms\/dreamImages?service=wms&version=1.3.0&request=getmap&format=image\/png&width=512&height=512&styles=&crs=EPSG:3857&bbox=696034.9878339197,5515003.449606179,799043.9814259901,5618059.505501436&layers=Spot5_Alpes_J_imagery1_ortho1",
+              "qualityMask": "",
+              "shiftMask": "",
+              "resolution": 50
+            }
+          ]
+        },
+        "thumbnail": "http:\/\/fpp-eoprocessing.terradue.com\/fpp-services\/webdav\/overview\/thumbnails\/Spot5_Alpes_J_imagery1.jpg",
+        "resolution": "9.005322028699864E-5",
+        "identifier": "Spot5_Alpes_J_imagery1",
+        "quicklook": "http:\/\/fpp-eoprocessing.terradue.com\/fpp-services\/webdav\/overview\/quicklooks\/Spot5_Alpes_J_imagery1.jpg",
+        "metadata": ""
+      }
+    }
+  ]
+}

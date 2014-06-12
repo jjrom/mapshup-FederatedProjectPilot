@@ -1,0 +1,42 @@
+MAP
+        EXTENT -180.0 -90.0 180.0 90.0
+        IMAGECOLOR 255 255 255
+        IMAGEQUALITY 100
+        IMAGETYPE PNG
+        INTERLACE ON
+        SIZE 256 256
+        STATUS ON
+        TRANSPARENT ON
+        UNITS DD
+        DEBUG 5
+        OUTPUTFORMAT
+            NAME "AGGPNG"
+            DRIVER "AGG/PNG"
+            EXTENSION "png"
+            MIMETYPE "image/png"
+            IMAGEMODE RGBA
+            TRANSPARENT ON
+            FORMATOPTION "TRANSPARENT=ON"
+        END
+        WEB
+          IMAGEPATH "/tmp/"
+          IMAGEURL "/"
+          METADATA
+            "ows_enable_request"   "*"
+            "wms_title"          "_msprowser WMS Proxy Server"
+            "wms_onlineresource" "http://engine.mapshup.info/cgi-bin/mapserv?map=/home/data/ows10/ows10.map&"
+            "wms_srs"            "EPSG:4326 EPSG:3857"
+            "wms_feature_info_mime_type"    "text/html"
+          END
+        END
+        PROJECTION
+          "init=epsg:3857"
+        END
+        LAYER
+          NAME "Spot5_Toulouse_J_IMAGERY4_ortho1"
+          TYPE RASTER
+          #OFFSITE 0 0 0
+          STATUS ON
+          DATA "/home/data/ows10/Spot5_Toulouse_J_IMAGERY4_ortho1.tif"
+        END
+    END
