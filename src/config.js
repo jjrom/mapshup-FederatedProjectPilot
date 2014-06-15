@@ -76,10 +76,13 @@
     /*
      * Default catalog layer options
      */
-    c["FPPConfig"].getCatalogLayerOptions = function(name) {
+    c["FPPConfig"].getCatalogLayerOptions = function(options) {
+        
+        options = options || {};
+        
         return {
-            title:name,
-            MID:'FPP' + name,
+            title:options.name,
+            MID:'FPP' + options.name,
             clusterized: false,
             unremovable: true,
             directSearch: true, // Do not show filter popup when click on search
@@ -87,7 +90,7 @@
                 zoom: false
             },
             featureInfo: {
-                title: '$platform$ : $identifier$',
+                title: options.name + ' : $' + (options.titleProperty || 'title') + '$',
                 noMenu: true,
                 keys: {
                     'identifier': {
@@ -100,6 +103,7 @@
                  * Show FPP toolbar on feature selection
                  */
                 onSelect: function(f) {
+                    console.log(f);
                     M.Plugins.FPP._o.show(f);
                     return true;
                 },
@@ -114,17 +118,17 @@
             ol: {
                 styleMap: new OpenLayers.StyleMap({
                     "default": new OpenLayers.Style(OpenLayers.Util.applyDefaults({
-                        fillOpacity: 0.3,
-                        strokeColor: "#FFFFFF",
+                        fillOpacity: 0.1,
+                        strokeColor: options.fillColor || "#FFFFFF",
                         strokeWidth: 1,
-                        fillColor: "#000"
+                        fillColor: options.fillColor || "#000000"
                     },
                     OpenLayers.Feature.Vector.style["default"]),
                             {}),
                     "select": {
                         strokeColor: "#FFFF00",
                         fillColor: "#FFFF00",
-                        fillOpacity: 0.3
+                        fillOpacity: 0.1
                     }
                 })
             }
@@ -139,12 +143,33 @@
             services: [
                 {
                     url:"http://geo.spacebel.be/opensearch/description.xml?parentIdentifier=EOP:ESA:DREAM:SENTINEL2_L1C_N2A&",
-                    options:c["FPPConfig"].getCatalogLayerOptions('Fedeo-Take5')
+                    options:c["FPPConfig"].getCatalogLayerOptions({
+                        name:'Fedeo-Take5',
+                        fillColor:'#FFF'
+                    })
                 },
                 {
                     url:"http://geo.spacebel.be/opensearch/description.xml?parentIdentifier=EOP:MDA-GSI:RSAT2_NRT&",
-                    options:c["FPPConfig"].getCatalogLayerOptions('Fedeo-RSAT2')
-                }
+                    options:c["FPPConfig"].getCatalogLayerOptions({
+                        name:'Fedeo-RSAT2',
+                        fillColor:'#F00'
+                    })
+                },
+                {
+                    url:"http://spirit.cnes.fr/resto/Landsat/$describe",
+                    options:c["FPPConfig"].getCatalogLayerOptions({
+                        name:'CNES-Landsat',
+                        fillColor:'#00F',
+                        titleProperty:'identifier'
+                    })
+                }/*,
+                {
+                    url:"http://spirit.cnes.fr/take5/ws/opensearch.xml",
+                    options:c["FPPConfig"].getCatalogLayerOptions({
+                        name:'CNES-Take5',
+                        fillColor:'#0F0'
+                    })
+                }*/
             ]
         }
     });
