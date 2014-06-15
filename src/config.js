@@ -103,7 +103,6 @@
                  * Show FPP toolbar on feature selection
                  */
                 onSelect: function(f) {
-                    console.log(f);
                     M.Plugins.FPP._o.show(f);
                     return true;
                 },
