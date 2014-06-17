@@ -91,7 +91,7 @@
             },
             featureInfo: {
                 title: options.name + ' : $' + (options.titleProperty || 'title') + '$',
-                noMenu: true,
+                noMenu: false,
                 keys: {
                     'identifier': {
                         transform: function(v) {
@@ -100,17 +100,10 @@
                     }
                 },
                 /*
-                 * Show FPP toolbar on feature selection
+                 * Check process
                  */
                 onSelect: function(f) {
-                    M.Plugins.FPP._o.show(f);
-                    return true;
-                },
-                /*
-                 * Hide FPP toolbar on feature unselection
-                 */
-                onUnselect: function(f) {
-                    M.Plugins.FPP._o.$d.hide();
+                    M.Plugins.FPP._o.checkProcess(f);
                     return true;
                 }
             },
@@ -140,6 +133,13 @@
         name:"Search",
         options:{
             services: [
+                /*{
+                    url:"http://eo-virtual-archive4.esa.int/search/TSX_1_SAR_SSC_SM/description",
+                    options:c["FPPConfig"].getCatalogLayerOptions({
+                        name:'Fedeo-TSX-Japan',
+                        fillColor:'#0F0'
+                    })
+                },*/
                 {
                     url:"http://geo.spacebel.be/opensearch/description.xml?parentIdentifier=EOP:ESA:DREAM:SENTINEL2_L1C_N2A&",
                     options:c["FPPConfig"].getCatalogLayerOptions({
