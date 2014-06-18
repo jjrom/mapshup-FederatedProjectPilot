@@ -96,7 +96,7 @@
             /*
              * Set the FPP structure
              */
-            self.$d = M.Util.$$('#FPP', M.$mcontainer).html('<div class="orthoselector"><ul id="' + M.Util.getId() + '"><li class="_acaciaclassification tool"></li></ul>');
+            self.$d = M.Util.$$('#FPP', M.$mcontainer).html('<div class="orthoselector"><ul id="' + M.Util.getId() + '"></ul>');
             
             /*
              * Copyright
@@ -200,8 +200,7 @@
                 if ($.isArray(feature.attributes.atom.links)) {
                     for (var i = 0, l = feature.attributes.atom.links.length; i < l; i++) {
                         if (feature.attributes.atom.links[i].rel === 'enclosure') {
-                            //return feature.attributes.atom.links[i].href;
-                            return 'http://mapshup.info/tmp/SPOT4_HRVIR1_XS_20130217093809_N2A_PENTE.TIF'
+                            return feature.attributes.atom.links[i].href;
                         }
                     }
                 }
@@ -277,21 +276,27 @@
 
             if (item.process.descriptor) {
 
-                $parentDiv = $('#' + item.process.parentId);
-
                 /*
                  * Classification
                  */
                 if (acacia && acacia.options.processId === item.process.descriptor.identifier) {
-
+                    
+                    /*
+                     * Create html container for loading status
+                     */
+                    $parentDiv = $('#' + item.process.parentId);
+                    if ($parentDiv.length === 0) {
+                        $('ul', this.$d).append('<li id="' + item.process.parentId + '" class="tool"></li>');
+                        $parentDiv = $('#' + item.process.parentId);
+                    }
+                    
                     /*
                      * Start process
                      */
                     if (item.process.status === "ProcessAccepted") {
-                        $('._acaciaclassification', $parentDiv)
-                                .html('<img class="loading" src="./fpp/img/loading.gif"/>')
+                        $parentDiv.html('<img class="loading" src="./fpp/img/loading.gif"/>')
                                 .attr('jtitle', M.Util._('Processing Land Cover'));
-                        M.tooltip.add($('._acaciaclassification', $parentDiv), 'n');
+                        M.tooltip.add($parentDiv, 's');
                     }
 
                     /*
@@ -310,9 +315,8 @@
                             result = item.process.result[j];
                             if (result.data && typeof result.data.value === "object") {
                                 if (M.Map.Util.getGeoType(result.data["mimeType"]) === 'WMS') {
-                                    $('._acaciaclassification', $parentDiv)
-                                            .html('<img src="./fpp/img/landcover.png"/>')
-                                            .attr('jtitle', M.Util._('Display Land Cover'))
+                                    $parentDiv.html('<img src="./fpp/img/landcover.png"/>')
+                                            .attr('jtitle', M.Util._('Display Land Cover') + ' : ' + item.process.parentId)
                                             .click(function(e) {
                                         e.stopPropagation();
                                         e.preventDefault();
@@ -327,7 +331,7 @@
                                         }
                                         return false;
                                     });
-                                    M.tooltip.add($('._acaciaclassification', $parentDiv), 'n');
+                                    M.tooltip.add($parentDiv, 's');
                                     
                                     /*
                                      * Remove process from list (to remove Cookie)

@@ -61,7 +61,7 @@
      * IF simulated is set to true then simulated services are used
      * instead of default services
      */
-    c["FPPConfig"].simulated = false;
+    c["FPPConfig"].simulated = true;
     
     /*
      * OTB WPS server url
@@ -140,6 +140,7 @@
                         fillColor:'#0F0'
                     })
                 },*/
+                /*
                 {
                     url:"http://geo.spacebel.be/opensearch/description.xml?parentIdentifier=EOP:ESA:DREAM:SENTINEL2_L1C_N2A&",
                     options:c["FPPConfig"].getCatalogLayerOptions({
@@ -153,7 +154,7 @@
                         name:'Fedeo-RSAT2',
                         fillColor:'#F00'
                     })
-                },
+                },*/
                 {
                     url:"http://spirit.cnes.fr/resto/Landsat/$describe",
                     options:c["FPPConfig"].getCatalogLayerOptions({
@@ -178,7 +179,7 @@
     if (c["FPPConfig"].simulated) {
         c["FPPConfig"].otbWPS = c["FPPConfig"].serverHost + '/fpp/ws/12_dummyOTBWPS.php?';
         c["FPPConfig"].otbTrainingListSchemaLocation = "http://constellation-wps.geomatys.com/cstl-wrapper/webdav/OTB_processing/trainingList.xsd";
-        c["FPPConfig"].imageToClassifyUrl = 'http://ows10-eoprocessing.terradue.com/fpp-services/webdav/orthoImages/Spot5_Toulouse_J_IMAGERY4/30.0/gtiff.tiff';
+        c["FPPConfig"].imageToClassifyUrl = 'http://mapshup.info/tmp/SPOT4_HRVIR1_XS_20130217093809_N2A_PENTE.TIF';
     }
 
     /*
@@ -238,14 +239,7 @@
     c.add("plugins", {
         name: "FPP",
         options: {
-            imageToClassifyUrl: c["FPPConfig"].imageToClassifyUrl,
-            callback: function(o) {
-                if (M.Plugins['FPP'] && M.Plugins['FPP']._o) {
-                    if (typeof M.Plugins['FPP']._o.processesCallback === 'function') {
-                        return M.Plugins['FPP']._o.processesCallback(o);
-                    }
-                }
-            }
+            imageToClassifyUrl: c["FPPConfig"].imageToClassifyUrl
         }
     });
 
