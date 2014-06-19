@@ -63,11 +63,6 @@
         this.$d = $();
 
         /*
-         * Catalog layer reference
-         */
-        this.catalogLayers = {};
-
-        /*
          * Reference to the active feature
          */
         this.feature = null;
@@ -83,8 +78,6 @@
 
             /*
              * init options
-             *
-             *      catalogs:{}, // Array of catalogs (FEDEO, CNES, DLR, etc.)
              */
             self.options = options || {};
 

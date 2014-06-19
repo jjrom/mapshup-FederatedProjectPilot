@@ -61,7 +61,7 @@
      * IF simulated is set to true then simulated services are used
      * instead of default services
      */
-    c["FPPConfig"].simulated = true;
+    c["FPPConfig"].simulated = false;
     
     /*
      * OTB WPS server url
@@ -133,6 +133,13 @@
         name:"Search",
         options:{
             services: [
+                {
+                    url:"http://geo.spacebel.be/opensearch/description.xml?parentIdentifier=LANDSAT_5_TM_&",
+                    options:c["FPPConfig"].getCatalogLayerOptions({
+                        name:'Fedeo-Landsat5',
+                        fillColor:'#FFF'
+                    })
+                },
                 /*{
                     url:"http://eo-virtual-archive4.esa.int/search/TSX_1_SAR_SSC_SM/description",
                     options:c["FPPConfig"].getCatalogLayerOptions({
@@ -140,14 +147,13 @@
                         fillColor:'#0F0'
                     })
                 },*/
-                /*
                 {
                     url:"http://geo.spacebel.be/opensearch/description.xml?parentIdentifier=EOP:ESA:DREAM:SENTINEL2_L1C_N2A&",
                     options:c["FPPConfig"].getCatalogLayerOptions({
                         name:'Fedeo-Take5',
                         fillColor:'#FFF'
                     })
-                },
+                },/*
                 {
                     url:"http://geo.spacebel.be/opensearch/description.xml?parentIdentifier=EOP:MDA-GSI:RSAT2_NRT&",
                     options:c["FPPConfig"].getCatalogLayerOptions({
@@ -180,6 +186,7 @@
         c["FPPConfig"].otbWPS = c["FPPConfig"].serverHost + '/fpp/ws/12_dummyOTBWPS.php?';
         c["FPPConfig"].otbTrainingListSchemaLocation = "http://constellation-wps.geomatys.com/cstl-wrapper/webdav/OTB_processing/trainingList.xsd";
         c["FPPConfig"].imageToClassifyUrl = 'http://mapshup.info/tmp/SPOT4_HRVIR1_XS_20130217093809_N2A_PENTE.TIF';
+        // SPOT4_HRVIR1_XS_20130403093426_N2A_PENTE
     }
 
     /*
