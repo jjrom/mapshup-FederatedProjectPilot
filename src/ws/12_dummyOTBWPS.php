@@ -56,7 +56,7 @@ elseif ($request == "DescribeProcess") {
     echo file_get_contents("14_dummyOTBWPS_DescribeProcess.xml");
 }
 elseif ($request == "succeeded") {
-    echo str_replace('%MAPSHUP_FPP_ROOT_URL%', MAPSHUP_FPP_ROOT_URL, file_get_contents("16_dummyOTBWPS_Execute_SVM_Succeeded_real.xml"));
+    echo str_replace('%MAPSHUP_FPP_ROOT_URL%', MAPSHUP_FPP_ROOT_URL, file_get_contents("16_dummyOTBWPS_Execute_SVM_Succeeded.xml"));
 }
 else {
     echo str_replace('%MAPSHUP_FPP_ROOT_URL%', MAPSHUP_FPP_ROOT_URL, file_get_contents("15_dummyOTBWPS_Execute_SVM_Accepted.xml"));

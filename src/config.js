@@ -61,7 +61,7 @@
      * IF simulated is set to true then simulated services are used
      * instead of default services
      */
-    c["FPPConfig"].simulated = false;
+    c["FPPConfig"].simulated = true;
     
     /*
      * OTB WPS server url
@@ -185,8 +185,7 @@
     if (c["FPPConfig"].simulated) {
         c["FPPConfig"].otbWPS = c["FPPConfig"].serverHost + '/fpp/ws/12_dummyOTBWPS.php?';
         c["FPPConfig"].otbTrainingListSchemaLocation = "http://constellation-wps.geomatys.com/cstl-wrapper/webdav/OTB_processing/trainingList.xsd";
-        c["FPPConfig"].imageToClassifyUrl = 'http://mapshup.info/tmp/SPOT4_HRVIR1_XS_20130217093809_N2A_PENTE.TIF';
-        // SPOT4_HRVIR1_XS_20130403093426_N2A_PENTE
+        c["FPPConfig"].imageToClassifyUrl = 'http://mapshup.info/tmp/SPOT4_HRVIR1_XS_20130403093426_N2A_PENTE.TIF';
     }
 
     /*

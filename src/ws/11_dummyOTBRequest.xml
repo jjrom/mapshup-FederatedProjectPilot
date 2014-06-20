@@ -1,0 +1,228 @@
+<wps:Execute service="WPS" version="1.0.0" xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/1.0.0/wpsExecute_request.xsd">
+    <ows:Identifier>urn:ogc:cstl:wps:orfeo:svmclassification</ows:Identifier>
+    <wps:DataInputs>
+        <wps:Input>
+            <ows:Identifier>urn:ogc:cstl:wps:orfeo:svmclassification:input:inputImage</ows:Identifier>
+            <wps:Reference xlink:href="http://django.esrin.esa.int/spot/Spot4Take5/CArdeche/SPOT4_HRVIR1_XS_20130403093426/SPOT4_HRVIR1_XS_20130403093426_N2A_PENTE.TIF"></wps:Reference>
+        </wps:Input>
+        <wps:Input>
+            <ows:Identifier>urn:ogc:cstl:wps:orfeo:svmclassification:input:sampleRatio</ows:Identifier>
+            <wps:Data>
+                <wps:LiteralData uom="">0.5</wps:LiteralData>
+            </wps:Data>
+        </wps:Input>
+        <wps:Input>
+            <ows:Identifier>urn:ogc:cstl:wps:orfeo:svmclassification:input:trainingList</ows:Identifier>
+            <wps:Data>
+                <wps:ComplexData mimeType="text/xml">
+                    <w:trainingList gml:id="trainingFeature" xsi:schemaLocation="http://constellation-wps.geomatys.com/cstl-wrapper/webdav/OTB_processing/trainingList.xsd" xmlns:w="constellation-sdi/WS/wps" xmlns:gml="http://www.opengis.net/gml" srsName="EPSG:4326">
+                        <w:trainingImage>http://django.esrin.esa.int/spot/Spot4Take5/CArdeche/SPOT4_HRVIR1_XS_20130403093426/SPOT4_HRVIR1_XS_20130403093426_N2A_PENTE.TIF</w:trainingImage>
+                        <!--<w:trainingImage>http://mapshup.info/tmp/SPOT4_HRVIR1_XS_20130403093426_N2A_PENTE.TIF</w:trainingImage>-->
+                        <w:imageClass>
+                            <w:imageClassType>
+                                <w:className>farmland</w:className>
+                                <w:classNumber>2</w:classNumber>
+                                <w:classGeometry>
+                                    <gml:Polygon xmlns:gml="http://www.opengis.net/gml" srsName="EPSG:4326">
+                                        <gml:exterior>
+                                            <gml:LinearRing>
+                                                <gml:posList>4.346931713684038 45.44421577231857 4.349764126403742 45.44487817852825 4.350965756042499 45.442951157045826 4.349935787780708 45.44084340193031 4.346931713684038 45.44421577231857</gml:posList>
+                                            </gml:LinearRing>
+                                        </gml:exterior>
+                                    </gml:Polygon>
+                                </w:classGeometry>
+                            </w:imageClassType>
+                        </w:imageClass>
+                        <w:imageClass>
+                            <w:imageClassType>
+                                <w:className>farmland</w:className>
+                                <w:classNumber>2</w:classNumber>
+                                <w:classGeometry>
+                                    <gml:Polygon xmlns:gml="http://www.opengis.net/gml" srsName="EPSG:4326">
+                                        <gml:exterior>
+                                            <gml:LinearRing>
+                                                <gml:posList>4.341696041686998 45.42482188969369 4.344356793029736 45.42656881681712 4.34573008404537 45.425665240571895 4.344700115783667 45.424219488495886 4.341696041686998 45.42482188969369</gml:posList>
+                                            </gml:LinearRing>
+                                        </gml:exterior>
+                                    </gml:Polygon>
+                                </w:classGeometry>
+                            </w:imageClassType>
+                        </w:imageClass>
+                        <w:imageClass>
+                            <w:imageClassType>
+                                <w:className>farmland</w:className>
+                                <w:classNumber>2</w:classNumber>
+                                <w:classGeometry>
+                                    <gml:Polygon xmlns:gml="http://www.opengis.net/gml" srsName="EPSG:4326">
+                                        <gml:exterior>
+                                            <gml:LinearRing>
+                                                <gml:posList>4.333971279724094 45.43813331536237 4.336202877624465 45.43692879066052 4.337147015197729 45.43710947100492 4.336803692443798 45.439398038626166 4.335516232116692 45.43975938292338 4.333971279724094 45.43813331536237</gml:posList>
+                                            </gml:LinearRing>
+                                        </gml:exterior>
+                                    </gml:Polygon>
+                                </w:classGeometry>
+                            </w:imageClassType>
+                        </w:imageClass>
+                        <w:imageClass>
+                            <w:imageClassType>
+                                <w:className>farmland</w:className>
+                                <w:classNumber>2</w:classNumber>
+                                <w:classGeometry>
+                                    <gml:Polygon xmlns:gml="http://www.opengis.net/gml" srsName="EPSG:4326">
+                                        <gml:exterior>
+                                            <gml:LinearRing>
+                                                <gml:posList>4.3617804227905115 45.4197012746131 4.3631537138061445 45.4197012746131 4.3631537138061445 45.41705042084646 4.361437100036581 45.41771314595536 4.3617804227905115 45.4197012746131</gml:posList>
+                                            </gml:LinearRing>
+                                        </gml:exterior>
+                                    </gml:Polygon>
+                                </w:classGeometry>
+                            </w:imageClassType>
+                        </w:imageClass>
+                        <w:imageClass>
+                            <w:imageClassType>
+                                <w:className>urban</w:className>
+                                <w:classNumber>7</w:classNumber>
+                                <w:classGeometry>
+                                    <gml:Polygon xmlns:gml="http://www.opengis.net/gml" srsName="EPSG:4326">
+                                        <gml:exterior>
+                                            <gml:LinearRing>
+                                                <gml:posList>4.391735333068862 45.4331343697878 4.391735333068862 45.430303445191626 4.393451946838336 45.43078531472527 4.393537777526864 45.43319460068305 4.391735333068862 45.4331343697878</gml:posList>
+                                            </gml:LinearRing>
+                                        </gml:exterior>
+                                    </gml:Polygon>
+                                </w:classGeometry>
+                            </w:imageClassType>
+                        </w:imageClass>
+                        <w:imageClass>
+                            <w:imageClassType>
+                                <w:className>urban</w:className>
+                                <w:classNumber>7</w:classNumber>
+                                <w:classGeometry>
+                                    <gml:Polygon xmlns:gml="http://www.opengis.net/gml" srsName="EPSG:4326">
+                                        <gml:exterior>
+                                            <gml:LinearRing>
+                                                <gml:posList>4.400404232604941 45.444757741614445 4.403494137390139 45.443131818106 4.403494137390139 45.4421080644494 4.399545925720204 45.44246939139078 4.399460095031766 45.443192038331254 4.400404232604941 45.444757741614445</gml:posList>
+                                            </gml:LinearRing>
+                                        </gml:exterior>
+                                    </gml:Polygon>
+                                </w:classGeometry>
+                            </w:imageClassType>
+                        </w:imageClass>
+                        <w:imageClass>
+                            <w:imageClassType>
+                                <w:className>wood</w:className>
+                                <w:classNumber>9</w:classNumber>
+                                <w:classGeometry>
+                                    <gml:Polygon xmlns:gml="http://www.opengis.net/gml" srsName="EPSG:4326">
+                                        <gml:exterior>
+                                            <gml:LinearRing>
+                                                <gml:posList>4.3270189939574895 45.42542428446402 4.331653851135195 45.42578571824046 4.332683819396988 45.42367732192161 4.330967205627424 45.42289418323274 4.327877300842226 45.42277369939318 4.3270189939574895 45.42542428446402</gml:posList>
+                                            </gml:LinearRing>
+                                        </gml:exterior>
+                                    </gml:Polygon>
+                                </w:classGeometry>
+                            </w:imageClassType>
+                        </w:imageClass>
+                        <w:imageClass>
+                            <w:imageClassType>
+                                <w:className>water</w:className>
+                                <w:classNumber>8</w:classNumber>
+                                <w:classGeometry>
+                                    <gml:Polygon xmlns:gml="http://www.opengis.net/gml" srsName="EPSG:4326">
+                                        <gml:exterior>
+                                            <gml:LinearRing>
+                                                <gml:posList>4.254239376647945 45.46315150024648 4.256642635925281 45.464054476271905 4.257844265563949 45.461405705587715 4.2560418211059465 45.45917823391692 4.254239376647945 45.46315150024648</gml:posList>
+                                            </gml:LinearRing>
+                                        </gml:exterior>
+                                    </gml:Polygon>
+                                </w:classGeometry>
+                            </w:imageClassType>
+                        </w:imageClass>
+                        <w:imageClass>
+                            <w:imageClassType>
+                                <w:className>water</w:className>
+                                <w:classNumber>8</w:classNumber>
+                                <w:classGeometry>
+                                    <gml:Polygon xmlns:gml="http://www.opengis.net/gml" srsName="EPSG:4326">
+                                        <gml:exterior>
+                                            <gml:LinearRing>
+                                                <gml:posList>4.247458752258306 45.45369948327683 4.247887905700675 45.4520738175011 4.249347027404836 45.45219423879538 4.249432858093273 45.454602610681356 4.247458752258306 45.45369948327683</gml:posList>
+                                            </gml:LinearRing>
+                                        </gml:exterior>
+                                    </gml:Polygon>
+                                </w:classGeometry>
+                            </w:imageClassType>
+                        </w:imageClass>
+                        <w:imageClass>
+                            <w:imageClassType>
+                                <w:className>water</w:className>
+                                <w:classNumber>8</w:classNumber>
+                                <w:classGeometry>
+                                    <gml:Polygon xmlns:gml="http://www.opengis.net/gml" srsName="EPSG:4326">
+                                        <gml:exterior>
+                                            <gml:LinearRing>
+                                                <gml:posList>4.255526836975141 45.444185662760376 4.255698498352016 45.44514916064577 4.252866085632311 45.44346302854749 4.251235302551275 45.44322214841976 4.251578625305205 45.44231883877998 4.253810223205576 45.44334258861249 4.255526836975141 45.444185662760376</gml:posList>
+                                            </gml:LinearRing>
+                                        </gml:exterior>
+                                    </gml:Polygon>
+                                </w:classGeometry>
+                            </w:imageClassType>
+                        </w:imageClass>
+                        <w:imageClass>
+                            <w:imageClassType>
+                                <w:className>wood</w:className>
+                                <w:classNumber>9</w:classNumber>
+                                <w:classGeometry>
+                                    <gml:Polygon xmlns:gml="http://www.opengis.net/gml" srsName="EPSG:4326">
+                                        <gml:exterior>
+                                            <gml:LinearRing>
+                                                <gml:posList>4.270890530212421 45.46832836654282 4.275954540832495 45.46893029688543 4.276297863586426 45.46664292738565 4.271920498474123 45.4658603849325 4.270890530212421 45.46832836654282</gml:posList>
+                                            </gml:LinearRing>
+                                        </gml:exterior>
+                                    </gml:Polygon>
+                                </w:classGeometry>
+                            </w:imageClassType>
+                        </w:imageClass>
+                        <w:imageClass>
+                            <w:imageClassType>
+                                <w:className>urban</w:className>
+                                <w:classNumber>7</w:classNumber>
+                                <w:classGeometry>
+                                    <gml:Polygon xmlns:gml="http://www.opengis.net/gml" srsName="EPSG:4326">
+                                        <gml:exterior>
+                                            <gml:LinearRing>
+                                                <gml:posList>4.280803974731521 45.521303699052844 4.283121403320419 45.52118342540831 4.282949741943454 45.52004081295733 4.280632313354555 45.519920536613114 4.280803974731521 45.521303699052844</gml:posList>
+                                            </gml:LinearRing>
+                                        </gml:exterior>
+                                    </gml:Polygon>
+                                </w:classGeometry>
+                            </w:imageClassType>
+                        </w:imageClass>
+                        <w:imageClass>
+                            <w:imageClassType>
+                                <w:className>urban</w:className>
+                                <w:classNumber>7</w:classNumber>
+                                <w:classGeometry>
+                                    <gml:Polygon xmlns:gml="http://www.opengis.net/gml" srsName="EPSG:4326">
+                                        <gml:exterior>
+                                            <gml:LinearRing>
+                                                <gml:posList>4.307239826782306 45.53627575921143 4.311273869140678 45.53543406236837 4.310930546386837 45.53441198497909 4.308613117797939 45.53411137044746 4.306639011962971 45.535133453299686 4.307239826782306 45.53627575921143</gml:posList>
+                                            </gml:LinearRing>
+                                        </gml:exterior>
+                                    </gml:Polygon>
+                                </w:classGeometry>
+                            </w:imageClassType>
+                        </w:imageClass>
+                    </w:trainingList>
+                </wps:ComplexData>
+            </wps:Data>
+        </wps:Input>
+    </wps:DataInputs>
+    <wps:ResponseForm>
+        <wps:ResponseDocument wps:lineage="false" storeExecuteResponse="true" status="true">
+            <wps:Output asReference="false" mimeType="application/x-ogc-wms">
+                <ows:Identifier>urn:ogc:cstl:wps:orfeo:svmclassification:output:outputImage</ows:Identifier>
+            </wps:Output>
+        </wps:ResponseDocument>
+    </wps:ResponseForm>
+</wps:Execute>
