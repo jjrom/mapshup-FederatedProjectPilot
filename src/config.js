@@ -61,7 +61,7 @@
      * IF simulated is set to true then simulated services are used
      * instead of default services
      */
-    c["FPPConfig"].simulated = true;
+    c["FPPConfig"].simulated = false;
     
     /*
      * OTB WPS server url
@@ -137,7 +137,35 @@
                     url:"http://geo.spacebel.be/opensearch/description.xml?parentIdentifier=LANDSAT_5_TM_&",
                     options:c["FPPConfig"].getCatalogLayerOptions({
                         name:'Fedeo-Landsat5',
-                        fillColor:'#FFF'
+                        fillColor:'red'
+                    })
+                },
+                {
+                    url:"http://geo.spacebel.be/opensearch/description.xml?parentIdentifier=Landsat7&",
+                    options:c["FPPConfig"].getCatalogLayerOptions({
+                        name:'Fedeo-Landsat7',
+                        fillColor:'green'
+                    })
+                },
+                {
+                    url:"http://geo.spacebel.be/opensearch/description.xml?parentIdentifier=MER_FRS_1P_A&",
+                    options:c["FPPConfig"].getCatalogLayerOptions({
+                        name:'Fedeo-MERIS',
+                        fillColor:'green'
+                    })
+                },
+                {
+                    url:"http://geo.spacebel.be/opensearch/description.xml?parentIdentifier=urn:eop:DLR:EOWEB:Geohazard.Supersite.TerraSAR-X_SSC&",
+                    options:c["FPPConfig"].getCatalogLayerOptions({
+                        name:'Fedeo-TerraSAR-X',
+                        fillColor:'blue'
+                    })
+                },
+                {
+                    url:"http://geo.spacebel.be/opensearch/description.xml?parentIdentifier=ASA_IMM_1P_A&",
+                    options:c["FPPConfig"].getCatalogLayerOptions({
+                        name:'Fedeo-ASAR',
+                        fillColor:'pink'
                     })
                 },
                 /*{
