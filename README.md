@@ -3,6 +3,7 @@ mapshup-FederatedProjectPilot
 
 mapshup build for the Ground Segment Coordination Body (GSCB - http://earth.esa.int/gscb/) Federated Project Pilot
 
+See [demo in video](https://vimeo.com/98979095) 
 
 Prerequesites
 =============
